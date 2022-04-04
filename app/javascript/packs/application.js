@@ -6,7 +6,6 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap/dist/css/bootstrap'
 import "@fortawesome/fontawesome-free/css/all"
 require("stylesheets/application.scss")
-
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
@@ -19,3 +18,6 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+require("trix")
+require("@rails/actiontext")
