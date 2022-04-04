@@ -4,6 +4,7 @@
 // that code so it'll be compiled.
 import 'bootstrap/dist/js/bootstrap.bundle';
 import 'bootstrap/dist/css/bootstrap'
+import "@fortawesome/fontawesome-free/css/all"
 require("stylesheets/application.scss")
 
 require("@rails/ujs").start()
