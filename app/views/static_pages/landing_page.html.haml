@@ -1,8 +1,37 @@
-.container
-  %h1 Hello World
-  = link_to 'Privacy Policy', privacy_policy_path
-  %i.far.fa-address-book
-  %i.fab.fa-github
-  = link_to courses_path, class: 'btn btn-success' do
-    .fa.fa-book
-    Course
+.h-100.p-5.rounded-3.bg-light
+  .display-4  
+    What do you want to learn today?
+  .form-inline.mt-5
+    = form_tag(courses_path, method: :get) do
+      .input-group
+        = text_field_tag :title, params[:title], autocomplete: 'off', placeholder: "Search", class: 'form-control-sm'
+        %span.input-group-append
+          %button.btn.btn-primary.btn-sm{:type => "submit"}
+            %span.fa.fa-search{"aria-hidden" => "true"}
+
+%hr
+%h2
+  Popular Courses
+.row.row-cols-1.row-cols-md-3.g-0.w-100
+  - @courses.each do |course|
+    = render 'courses/course', course: course
+%hr
+%h2
+  Top-Rated Courses
+.row.row-cols-1.row-cols-md-3.g-0.w-100
+  - @courses.each do |course|
+    = render 'courses/course', course: course
+%hr
+%h2  
+  Most Recent Courses
+.row.row-cols-1.row-cols-md-3.g-0.w-100
+  - @recent_courses.each do |course|
+    = render 'courses/course', course: course
+-# .container
+-#   %h1 Hello World
+-#   = link_to 'Privacy Policy', privacy_policy_path
+-#   %i.far.fa-address-book
+-#   %i.fab.fa-github
+-#   = link_to courses_path, class: 'btn btn-success' do
+-#     .fa.fa-book
+-#     Course
