@@ -25,6 +25,8 @@ gem 'simple_form'
 gem 'faker'
 gem 'devise'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
+gem 'ransack'
+gem 'public_activity'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem "haml-rails", "~> 2.0"
