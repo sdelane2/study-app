@@ -1,7 +1,8 @@
 Rails.application.configure do
-  # Settings specified here will take precedence over those in config/application.rb.
-
-  # Code is not reloaded between requests.
+  config.action_mailer.default_url_options = { :host => 'young-atoll-09032.herokuapp.com', :protocol => 'https' }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.delivery_method = :smtp
   config.cache_classes = true
 
   # Eager load code on boot. This eager loads most of Rails and
