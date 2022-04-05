@@ -7,26 +7,20 @@ ruby '2.7.5'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.7'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
-# Use Puma as the app server
 gem 'puma', '~> 4.1'
-# Use SCSS for stylesheets
 gem 'sass-rails', '>= 6'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker', '~> 5.2.1'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
-# Use Redis adapter to run Action Cable in production
-# gem 'redis', '~> 4.0'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+
 gem 'simple_form'
 gem 'faker'
 gem 'devise'
 gem 'friendly_id', '~> 5.4', '>= 5.4.2'
 gem 'ransack'
 gem 'public_activity'
+gem 'rolify'
+gem 'pundit'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 gem "haml-rails", "~> 2.0"
