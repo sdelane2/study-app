@@ -5,6 +5,16 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
   config.cache_classes = true
 
+  config.action_mailer.smtp_settings = {
+    port: 587, 
+    address: "email-smtp.us-east-2.amazonaws.com",
+    user_name: Rails.application.credentials.smpt_username,
+    password: Rails.application.credentials.smpt_password,
+    authentication: :plain,
+    enable_starttls_auto: true
+
+  }
+
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers
   # and those relying on copy on write to perform better.
