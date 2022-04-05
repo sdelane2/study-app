@@ -3,7 +3,12 @@
         .fa.fa-book 
         = link_to course.title, course_path(course)
     .card-body 
-        = course.description 
+        = course.short_description
+    .card-footer
+        .fa.fa-globe-americas
+        = course.language
+        = course.level
+        = number_to_currency(course.price)
     .card-footer
         .far.fa-clock
         = course.created_at.strftime('%d-%b-%Y')
