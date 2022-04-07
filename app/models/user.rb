@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
   after_create :assign_default_role
 
+  protected
+
   def assign_default_role
     if User.count == 1
       self.add_role(:admin) if self.roles.blank?
